@@ -1,0 +1,140 @@
+.feedback__title {
+  margin-bottom: 25px;
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback__input {
+  margin-bottom: 25px;
+  padding: 14px 24px;
+  border: none;
+  line-height: 32px;
+  color: var(--lightgray);
+  outline: none;
+  background-color: var(--dark--light);
+  transition: background-color var(--short);
+}
+
+.feedback__input:focus-visible {
+  background-color: var(--dark-gray);
+}
+
+.feedback__input:focus {
+  color: var(--white);
+}
+
+.feedback__input::placeholder {
+  color: var(--lightgray);
+}
+
+.feedback__input--textarea {
+  margin-bottom: 32px;
+}
+
+.feedback__input--textarea {
+  height: 150px;
+  resize: none;
+}
+
+.feedback__form-bottom {
+  display: flex;
+  align-items: center;
+}
+
+.feedback__submit-btn {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 269px;
+  margin-right: 23px;
+  padding: 20px 15px;
+  background-color: var(--orange);
+}
+
+.feedback__label {
+  line-height: 1;
+  cursor: pointer;
+  transition: color var(--short);
+}
+
+.feedback__visual-check {
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid;
+  vertical-align: middle;
+  transition: border-color var(--short);
+}
+
+.feedback__visual-check::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 4px;
+  border-bottom: 2px solid #97ee3f;
+  border-left: 2px solid #97ee3f;
+  opacity: 0;
+  transition-duration: var(--short);
+  transition-property: opacity, transform;
+  transform: translate(-50%, -60%) rotate(-45deg) scale(1.8);
+}
+
+.feedback__check-text {
+  vertical-align: middle;
+}
+
+.feedback__chekbox:checked ~ .feedback__visual-check::before {
+  opacity: 1;
+  transform: translate(-50%, -60%) rotate(-45deg) scale(1);
+}
+
+.feedback__chekbox:focus-visible ~ .feedback__visual-check {
+  border-color: var(--orange);
+}
+
+@media (max-width:1440px) {
+  .feedback__submit-btn {
+    max-width: 240px;
+  }
+}
+
+@media (max-width:576px) {
+  .feedback__submit-btn {
+    max-width: 180px;
+    margin-right: 0;
+    margin-bottom: 10px;
+    padding: 13px 15px;
+  }
+
+  .feedback__check-text {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .feedback__title {
+    margin-bottom: 20px;
+  }
+
+  .feedback__input {
+    padding: 14px 20px;
+  }
+
+  .feedback__input--textarea {
+    margin-bottom: 25px;
+  }
+}
+
+@media (any-hover: hover) {
+  .feedback__input:hover:not(:active) {
+    background-color: var(--dark-gray);
+  }
+
+  .feedback__label:hover:not(:active) {
+    color: var(--white);
+  }
+}

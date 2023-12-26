@@ -1,4 +1,3 @@
-import './style.css'
 (() => {
     const swiper = new Swiper('.js-hero-slider', {
         slidesPerView: 1,
