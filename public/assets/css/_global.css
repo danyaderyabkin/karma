@@ -25,22 +25,45 @@ li {
   list-style: none;
 }
 
+
 body {
   min-width: 320px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: var(--default-fs);
   line-height: var(--default-lh);
-  color: var(--dark);
-  background-color: var(--white);
+  color: var(--white);
+  background-color: var(--white)
 }
 
-.container {
-  max-width: var(--container-max);
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: var(--container-padding);
-  padding-left: var(--container-padding);
+a {
+  color: inherit;
+  text-decoration: none;
 }
+
+.btn {
+  display: inline-block;
+  padding: 20px 45px;
+  border: none;
+  font-family: Roboto,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--white);
+  text-align: center;
+  outline: none;
+  background-color: var(--orange);
+  cursor: pointer;
+  transition: background-color var(--short)
+}
+
+.btn:focus-visible {
+  background-color: var(--orange-transparent)
+}
+
+.btn:active {
+  background-color: var(--orange) !important;
+}
+
 
 .reset-list {
   margin: 0;
@@ -48,34 +71,26 @@ body {
   list-style: none;
 }
 
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+.reset-btn {
   padding: 0;
-  border: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.section-title {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 48px;
-  font-weight: var(--regular);
-  line-height: 59px;
-}
+@media (any-hover: hover) {
+  .btn:hover:not(:active) {
+      background-color:var(--orange-transparent)
+  }
 
-.text {
-  margin-top: 0;
-  margin-bottom: 50px;
-}
+  .btn--border-accent:hover:not(:active) {
+      background-color: var(--orange);
+      color: var(--white)
+  }
 
-.text:last-child {
-  margin-bottom: 0;
-}
-
-.color-lightgray-span {
-  color: var(--lightgray);
+  .btn--border:hover:not(:active) {
+      border-color: var(--dark-gray);
+      color: var(--white);
+      background-color: var(--dark-gray)
+  }
 }

@@ -26,28 +26,10 @@
 .about__card:not(:last-child) {
   margin-bottom: 32px;
 }
-
 .card {
-  display: flex;
-  align-items: center;
-  max-width: 870px;
-  padding: 64px 116px 64px 60px;
-  border: 1px solid var(--lightgray);
-  background-size: 0;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px -1px rgba(0, 0, 0, 0.1);
 }
-
-.card::before {
-  content: "";
-  align-self: flex-start;
-  flex-shrink: 0;
-  width: calc(190 / (870 - 60 - 116) * 100%);
-  margin-right: 50px;
-  padding-top: calc(165 / (870 - 60 - 116) * 100%);
-  background-image: inherit;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 .card__title {
   margin-top: 0;
   margin-bottom: 8px;

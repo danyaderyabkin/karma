@@ -40,10 +40,6 @@
     justify-content: center;
   }
 
-  .socials__link {
-    width: 40px;
-    height: 40px;
-  }
 
   .socials__item:not(:nth-child(3n)) {
     margin-right: 15px;
