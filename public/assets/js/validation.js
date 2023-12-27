@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    
     $('#first_form').submit(function(e) {
       e.preventDefault();
       let first_name = $('#first_name').val();
@@ -24,7 +23,7 @@ $(document).ready(function() {
         }
       }
       if (text.length< 8) {
-        $('#text').after('<span class="error">Укажите что-то в вашем письме!</span>');
+        $('#text').after('<span class="error">Укажите что-то в вашем письме!(минимум 8 символов)</span>');
         return false;
       }
 
