@@ -1,12 +1,12 @@
 
-//Стили
+//styles
 import 'animate.css';
 import './public/assets/css/style.css';
 
-//Анимация
+//animation
 new WOW().init();
 
-//Слайдер
+//slider
 const swiper = new Swiper('.js-hero-slider', {
     slidesPerView: 1,
     loop: false,
